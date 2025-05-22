@@ -10,11 +10,11 @@ def index(request):
         "age": "21",
         'nationality':"Indian"
     }
-    return render(request, 'simple.html', context)
+    return render(request, 'index.html')
 
 
 def counter(request):
-    words= request.GET['words']
+    words= request.POST['words']
     countWord= len(words.split())
     return render(request, 'counter.html', {'count': countWord} )
 
